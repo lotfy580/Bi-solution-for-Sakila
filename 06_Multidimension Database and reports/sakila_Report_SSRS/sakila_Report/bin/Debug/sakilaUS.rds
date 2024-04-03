@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="sakilaUS">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=DESKTOP-S7C5GPJ\SQLEXPRESS;Initial Catalog=sakilaUS</ConnectString>
+    <IntegratedSecurity>true</IntegratedSecurity>
+    <Prompt>Specify a user name and password for data source sakilaUS</Prompt>
+  </ConnectionProperties>
+  <DataSourceID>e4143e88-c4f3-49e9-a9d4-f59f8ad5633d</DataSourceID>
+</RptDataSource>

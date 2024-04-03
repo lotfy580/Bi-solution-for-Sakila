@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "sakila_Report", "sakila_Report\sakila_Report.rptproj", "{E76FC250-C9CC-45F3-9AAE-CDE632845BE4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E76FC250-C9CC-45F3-9AAE-CDE632845BE4}.Debug|Default.ActiveCfg = Debug
+		{E76FC250-C9CC-45F3-9AAE-CDE632845BE4}.Debug|Default.Build.0 = Debug
+		{E76FC250-C9CC-45F3-9AAE-CDE632845BE4}.Debug|Default.Deploy.0 = Debug
+		{E76FC250-C9CC-45F3-9AAE-CDE632845BE4}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{E76FC250-C9CC-45F3-9AAE-CDE632845BE4}.DebugLocal|Default.Build.0 = DebugLocal
+		{E76FC250-C9CC-45F3-9AAE-CDE632845BE4}.Release|Default.ActiveCfg = Release
+		{E76FC250-C9CC-45F3-9AAE-CDE632845BE4}.Release|Default.Build.0 = Release
+		{E76FC250-C9CC-45F3-9AAE-CDE632845BE4}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B7870F2C-2E8B-402D-BF9F-790D8779749D}
+	EndGlobalSection
+EndGlobal
