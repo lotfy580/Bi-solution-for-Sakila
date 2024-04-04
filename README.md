@@ -67,4 +67,12 @@ In our business case, the main measures we need to track are payments and the ac
 However, this integration presents a challenge: some transactions in the accumulated fact may not yet have a corresponding payment, resulting in null payment amounts. This is acceptable because aggregation functions handle nulls as expected. Additionally, we can introduce a binary column indicating whether the rental has been paid for, facilitating filtering and payment count calculations
 
 ## 3) ETL
+ETL, or Extract Transform Load, is a methodology used to manage data flow. It involves three key phases:
 
+<div>Extraction: Data is gathered from various sources.</div>
+<div>Transformation: The data is processed and cleaned to align with the structure and quality standards of the data warehouse, as defined by the team.</div>
+<div>Loading: The processed data is then loaded into the data warehouse for storage and analysis.</div>
+<div>.</div>
+
+
+To accomplish this task, I utilized SSIS, a widely used ETL tool developed by Microsoft. Known for its ease of use, practicality, and extensive feature set, SSIS streamlines the extraction, transformation, and loading processes, making data management more efficient and effective 
