@@ -75,4 +75,25 @@ ETL, or Extract Transform Load, is a methodology used to manage data flow. It in
 <div>.</div>
 
 
-To accomplish this task, I utilized SSIS, a widely used ETL tool developed by Microsoft. Known for its ease of use, practicality, and extensive feature set, SSIS streamlines the extraction, transformation, and loading processes, making data management more efficient and effective 
+To accomplish this task, I utilized SSIS, a widely used ETL tool developed by Microsoft. Known for its ease of use, practicality, and extensive feature set, SSIS streamlines the extraction, transformation, and loading processes, making data management more efficient and effective.
+
+### Implementaing of Customer Dimension
+<img src="https://github.com/lotfy580/Bi-solution-for-Sakila/blob/main/05_ETL/dimCustomer.png"></img>
+
+In this SSIS package, data is extracted from four sources: SQL Server via OLE connection, MySQL and PostgreSQL via ODBC connection, and CSV files. The extracted data then undergoes several tasks: first, it enters a Derived Column task to incorporate predefined source system codes.Next, it dive into a Data Conversion task to manage different data types among source systems. Next, it proceeds to a Sort task to arrange the data and eliminate duplicates. Subsequently, all the data is merged using a Union All task. Finally, the package includes a Slowly Changing Dimension task to handle data changes for future ETL processes.
+
+### Implementaion of Fact Table
+#### Control Flow 
+<img src="https://github.com/lotfy580/Bi-solution-for-Sakila/blob/main/05_ETL/factRentals%20Control%20Flow.png"></img>
+
+
+In this Control Flow task, we execute four SQL tasks to query the last rental BK and last ETL date from each source system. This information is retrieved from the Meta Control Table in the Data Warehouse and passed into parameters. These parameters are then utilized to filter data in subsequent ETL processes. After the Data Flow task concludes, we execute another task to update these BKs in the Meta Control table with new values.
+
+### Meta Control Table in the Data Warehouse 
+<img src="https://github.com/lotfy580/Bi-solution-for-Sakila/blob/main/05_ETL/metaControlTable.png"></img>
+
+### Data Flow Task 
+<img src="https://github.com/lotfy580/Bi-solution-for-Sakila/blob/main/05_ETL/factRentals%20Data%20Flow.png"></img>
+
+
+In this data flow task, data is queried from source systems. During this phase, parameters can be passed into Source tasks to filter the data before loading it into the ETL server. However, this functionality is limited to OLE source connection, such as SQL Server. Unfortunately, ODBC connections (MySQL and PostgreSQL) and CSV files do not support input parameters in SSIS. To overcome this limitation, we must first load the data into our SSIS server and then filter it using input parameters through a Case Split task in the Data Flow. Subsequently, we proceed with steps similar to those for the Customer dimension: adding source system codes, sorting, data conversion, and using Union All. Finally, we implement lookups for the new keys in the data warehouse.
