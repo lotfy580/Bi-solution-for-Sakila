@@ -97,3 +97,5 @@ In this Control Flow task, we execute four SQL tasks to query the last rental BK
 
 
 In this data flow task, data is queried from source systems. During this phase, parameters can be passed into Source tasks to filter the data before loading it into the ETL server. However, this functionality is limited to OLE source connection, such as SQL Server. Unfortunately, ODBC connections (MySQL and PostgreSQL) and CSV files do not support input parameters in SSIS. To overcome this limitation, we must first load the data into our SSIS server and then filter it using input parameters through a Case Split task in the Data Flow. Subsequently, we proceed with steps similar to those for the Customer dimension: adding source system codes, sorting, data conversion, and using Union All. Finally, we implement lookups for the new keys in the data warehouse.
+
+<div><stronge> For information about SSAS, SSRS, Power-BI and Tableau Dashboards check the files in the repository</stronge></div>
